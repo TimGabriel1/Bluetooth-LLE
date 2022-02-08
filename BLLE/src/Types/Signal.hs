@@ -1,0 +1,56 @@
+module Types.Signal where
+
+import Data.ByteString
+import Data.Word
+import Prelude
+
+-- | Signallling Command All Signalling commands are sent to CID 0x0001
+data SignallingCommand = SignallingCommand
+  { code :: Word8,
+    identifier :: Word8,
+    length :: Word16,
+    dataContent :: Word16
+  }
+
+data SignalCommand
+  = RESERVED
+  | COMMANDREJECT
+  | CONNECTIONREQUEST
+  | CONNECTIONRESPONSE
+  | CONFIGUREREQUEST
+  | CONFIGURERESPONSE
+  | DISCONNECTREQUEST
+  | DISCONNECTRESPONSE
+  | ECHOREQUEST
+  | ECHORESPONSE
+  | INFORMATIONREQUEST
+  | INFORMATIONRESPONSE
+
+instance Enum SignalCommand where
+  fromEnum i = case i of
+    RESERVED -> 0x00
+    COMMANDREJECT -> 0x01
+    CONNECTIONREQUEST -> 0x02
+    CONNECTIONRESPONSE -> 0x03
+    CONFIGUREREQUEST -> 0x04
+    CONFIGURERESPONSE -> 0x05
+    DISCONNECTREQUEST -> 0x06
+    DISCONNECTRESPONSE -> 0x07
+    ECHOREQUEST -> 0x08
+    ECHORESPONSE -> 0x09
+    INFORMATIONREQUEST -> 0x0A
+    INFORMATIONRESPONSE -> 0x0B
+
+  toEnum j = case j of
+    0x00 -> RESERVED
+    0x01 -> COMMANDREJECT
+    0x02 -> CONNECTIONREQUEST
+    0x03 -> CONNECTIONRESPONSE
+    0x04 -> CONFIGUREREQUEST
+    0x05 -> CONFIGURERESPONSE
+    0x06 -> DISCONNECTREQUEST
+    0x07 -> DISCONNECTRESPONSE
+    0x08 -> ECHOREQUEST
+    0x09 -> ECHORESPONSE
+    0x0A -> INFORMATIONREQUEST
+    _ -> INFORMATIONRESPONSE
