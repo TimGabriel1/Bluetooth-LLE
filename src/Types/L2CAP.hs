@@ -78,7 +78,7 @@ data L2cap_info_type_t
   | L2CAP_INFO_TYPE_EXTENDED_FEATURES_SUPPORTED
   | L2CAP_INFO_TYPE_FIXED_CHANNELS_SUPPORTED
 
--- | brief L2CAP Configuration Option Types used in Configurateion Request & Response
+-- | brief L2CAP Configuration Option Types used in Configuration Request & Response
 data L2cap_config_option_type_t
   = L2CAP_CONFIG_OPTION_TYPE_MAX_TRANSMISSION_UNIT
   | L2CAP_CONFIG_OPTION_TYPE_FLUSH_TIMEOUT
@@ -89,35 +89,35 @@ data L2cap_config_option_type_t
   | L2CAP_CONFIG_OPTION_TYPE_EXTENDED_WINDOW_SIZE 
 
 -- | L2CAP Configuration Result Codes
-data L2CAP_CONF_RESULT_SUCCESS = 0x0000
-data L2CAP_CONF_RESULT_UNACCEPTABLE_PARAMETERS = 0x0001
-data L2CAP_CONF_RESULT_REJECT = 0x0002
-data L2CAP_CONF_RESULT_UNKNOWN_OPTIONS = 0x0003
-data L2CAP_CONF_RESULT_PENDING = 0x0004
-data L2CAP_CONF_RESULT_FLOW_SPEC_REJECTED = 0x0005
+data ConfigurationResultCode 
+  = L2CAP_CONF_RESULT_SUCCESS
+  | L2CAP_CONF_RESULT_UNACCEPTABLE_PARAMETERS 
+  | L2CAP_CONF_RESULT_REJECT 
+  | L2CAP_CONF_RESULT_UNKNOWN_OPTIONS 
+  | L2CAP_CONF_RESULT_PENDING 
+  | L2CAP_CONF_RESULT_FLOW_SPEC_REJECTED
 
 
--- | L2CAP Reject Result Codes
-data L2CAP_REJ_CMD_UNKNOWN = 0x0000
+
     
--- | Response Timeout eXpired
-data L2CAP_RTX_TIMEOUT_MS = 10000
+-- -- | Response Timeout eXpired
+-- L2CAP_RTX_TIMEOUT_MS = 10000
 
--- | Extended Response Timeout eXpired
-data L2CAP_ERTX_TIMEOUT_MS =  120000
+-- -- | Extended Response Timeout eXpired
+-- L2CAP_ERTX_TIMEOUT_MS =  120000
 
--- | nr of buffered acl packets in outgoing queue to get max performance 
-data NR_BUFFERED_ACL_PACKETS = 3
+-- -- | nr of buffered acl packets in outgoing queue to get max performance 
+-- NR_BUFFERED_ACL_PACKETS = 3
 
--- | used to cache l2cap rejects, echo, and informational requests
-data NR_PENDING_SIGNALING_RESPONSES = 3
+-- -- | used to cache l2cap rejects, echo, and informational requests
+--  NR_PENDING_SIGNALING_RESPONSES = 3
 
--- | nr of credits provided to remote if credits fall below watermark
-data L2CAP_CREDIT_BASED_FLOW_CONTROL_MODE_AUTOMATIC_CREDITS_WATERMARK = 5
-data L2CAP_CREDIT_BASED_FLOW_CONTROL_MODE_AUTOMATIC_CREDITS_INCREMENT = 5
+-- -- | nr of credits provided to remote if credits fall below watermark
+-- L2CAP_CREDIT_BASED_FLOW_CONTROL_MODE_AUTOMATIC_CREDITS_WATERMARK = 5
+-- L2CAP_CREDIT_BASED_FLOW_CONTROL_MODE_AUTOMATIC_CREDITS_INCREMENT = 5
 
--- | offsets for L2CAP SIGNALING COMMANDS
-data L2CAP_SIGNALING_COMMAND_CODE_OFFSET  =  0
-data L2CAP_SIGNALING_COMMAND_SIGID_OFFSET =  1
-data L2CAP_SIGNALING_COMMAND_LENGTH_OFFSET = 2
-data L2CAP_SIGNALING_COMMAND_DATA_OFFSET = 4
+-- -- | offsets for L2CAP SIGNALING COMMANDS
+--  L2CAP_SIGNALING_COMMAND_CODE_OFFSET  =  0
+--  L2CAP_SIGNALING_COMMAND_SIGID_OFFSET =  1
+-- L2CAP_SIGNALING_COMMAND_LENGTH_OFFSET = 2
+--  L2CAP_SIGNALING_COMMAND_DATA_OFFSET = 4

@@ -1,0 +1,141 @@
+
+
+
+-- | Flags
+ BLUETOOTH_DATA_TYPE_FLAGS = 0x01
+
+-- | Incomplete List of 16-bit Service Class UUIDs
+ BLUETOOTH_DATA_TYPE_INCOMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS = 0x02 
+
+ -- | Complete List of 16-bit Service Class UUIDs
+ BLUETOOTH_DATA_TYPE_COMPLETE_LIST_OF_16_BIT_SERVICE_CLASS_UUIDS   =   0x03
+
+ -- | Incomplete List of 32-bit Service Class UUIDs
+ BLUETOOTH_DATA_TYPE_INCOMPLETE_LIST_OF_32_BIT_SERVICE_CLASS_UUIDS  =    0x04
+
+ -- | Complete List of 32-bit Service Class UUIDs
+ BLUETOOTH_DATA_TYPE_COMPLETE_LIST_OF_32_BIT_SERVICE_CLASS_UUIDS     =   0x05
+
+-- | Incomplete List of 128-bit Service Class UUIDs
+ BLUETOOTH_DATA_TYPE_INCOMPLETE_LIST_OF_128_BIT_SERVICE_CLASS_UUIDS   =  0x06 
+
+-- | Complete List of 128-bit Service Class UUIDs
+ BLUETOOTH_DATA_TYPE_COMPLETE_LIST_OF_128_BIT_SERVICE_CLASS_UUIDS   =    0x07 
+
+ -- | Shortened Local Name
+ BLUETOOTH_DATA_TYPE_SHORTENED_LOCAL_NAME                           =    0x08
+
+-- | Complete Local Name
+ BLUETOOTH_DATA_TYPE_COMPLETE_LOCAL_NAME                            =    0x09 
+
+-- | Tx Power Level
+ BLUETOOTH_DATA_TYPE_TX_POWER_LEVEL                                 =    0x0A 
+
+-- | Class of Device
+ BLUETOOTH_DATA_TYPE_CLASS_OF_DEVICE                                =    0x0D 
+
+-- | Simple Pairing Hash C
+ BLUETOOTH_DATA_TYPE_SIMPLE_PAIRING_HASH_C                          =    0x0E 
+
+-- | Simple Pairing Hash C-192
+ BLUETOOTH_DATA_TYPE_SIMPLE_PAIRING_HASH_C_192                      =    0x0E 
+
+ -- | Simple Pairing Randomizer R
+ BLUETOOTH_DATA_TYPE_SIMPLE_PAIRING_RANDOMIZER_R                    =    0x0F
+
+-- | Simple Pairing Randomizer R-192
+ BLUETOOTH_DATA_TYPE_SIMPLE_PAIRING_RANDOMIZER_R_192                =    0x0F 
+
+-- | Device ID
+ BLUETOOTH_DATA_TYPE_DEVICE_ID                                      =    0x10 
+
+ -- | Security Manager TK Value
+ BLUETOOTH_DATA_TYPE_SECURITY_MANAGER_TK_VALUE                      =    0x10
+
+-- | Security Manager Out of Band Flags
+ BLUETOOTH_DATA_TYPE_SECURITY_MANAGER_OUT_OF_BAND_FLAGS             =    0x11 
+
+-- | Slave Connection Interval Range
+ BLUETOOTH_DATA_TYPE_SLAVE_CONNECTION_INTERVAL_RANGE                =    0x12 
+
+-- | List of 16-bit Service Solicitation UUIDs
+ BLUETOOTH_DATA_TYPE_LIST_OF_16_BIT_SERVICE_SOLICITATION_UUIDS      =    0x14 
+
+-- | List of 128-bit Service Solicitation UUIDs
+ BLUETOOTH_DATA_TYPE_LIST_OF_128_BIT_SERVICE_SOLICITATION_UUIDS     =    0x15 
+
+ -- | Service Data
+ BLUETOOTH_DATA_TYPE_SERVICE_DATA                                   =    0x16
+
+-- | Service Data - 16-bit UUID
+ BLUETOOTH_DATA_TYPE_SERVICE_DATA_16_BIT_UUID                       =    0x16 
+
+-- | Public Target Address
+ BLUETOOTH_DATA_TYPE_PUBLIC_TARGET_ADDRESS                          =    0x17 
+
+-- | Random Target Address
+ BLUETOOTH_DATA_TYPE_RANDOM_TARGET_ADDRESS                          =    0x18 
+
+-- | Appearance
+ BLUETOOTH_DATA_TYPE_APPEARANCE                                     =    0x19 
+
+ -- | Advertising Interval
+ BLUETOOTH_DATA_TYPE_ADVERTISING_INTERVAL                           =    0x1A
+
+-- | LE Bluetooth Device Address
+ BLUETOOTH_DATA_TYPE_LE_BLUETOOTH_DEVICE_ADDRESS                    =    0x1B 
+
+ -- | LE Role
+ BLUETOOTH_DATA_TYPE_LE_ROLE                                        =    0x1C
+
+-- | Simple Pairing Hash C-256
+ BLUETOOTH_DATA_TYPE_SIMPLE_PAIRING_HASH_C_256                      =    0x1D 
+
+-- | Simple Pairing Randomizer R-256
+ BLUETOOTH_DATA_TYPE_SIMPLE_PAIRING_RANDOMIZER_R_256                =    0x1E 
+
+-- | List of 32-bit Service Solicitation UUIDs
+ BLUETOOTH_DATA_TYPE_LIST_OF_32_BIT_SERVICE_SOLICITATION_UUIDS      =    0x1F 
+
+-- | Service Data - 32-bit UUID
+ BLUETOOTH_DATA_TYPE_SERVICE_DATA_32_BIT_UUID                       =    0x20 
+
+-- | Service Data - 128-bit UUID
+ BLUETOOTH_DATA_TYPE_SERVICE_DATA_128_BIT_UUID                      =    0x21 
+
+-- | LE Secure Connections Confirmation Value
+ BLUETOOTH_DATA_TYPE_LE_SECURE_CONNECTIONS_CONFIRMATION_VALUE       =    0x22 
+
+-- | LE Secure Connections Random Value
+ BLUETOOTH_DATA_TYPE_LE_SECURE_CONNECTIONS_RANDOM_VALUE             =    0x23 
+
+ -- | URI
+ BLUETOOTH_DATA_TYPE_URI       =    0x24
+
+-- | Indoor Positioning
+ BLUETOOTH_DATA_TYPE_INDOOR_POSITIONING           =    0x25 
+
+ -- | Transport Discovery Data
+ BLUETOOTH_DATA_TYPE_TRANSPORT_DISCOVERY_DATA        =    0x26
+
+-- | LE Supported Features
+ BLUETOOTH_DATA_TYPE_LE_SUPPORTED_FEATURES      =    0x27 
+
+-- | Channel Map Update Indication
+ BLUETOOTH_DATA_TYPE_CHANNEL_MAP_UPDATE_INDICATION    =    0x28 
+
+-- | PB-ADV
+ BLUETOOTH_DATA_TYPE_PB_ADV     =    0x29 
+
+-- | Mesh Message
+ BLUETOOTH_DATA_TYPE_MESH_MESSAGE    =    0x2A 
+
+-- | Mesh Beacon
+ BLUETOOTH_DATA_TYPE_MESH_BEACON  =    0x2B 
+
+ -- | 3D Information Data
+ BLUETOOTH_DATA_TYPE_3D_INFORMATION_DATA   =    0x3D
+
+-- | Manufacturer Specific Data
+ BLUETOOTH_DATA_TYPE_MANUFACTURER_SPECIFIC_DATA =    0xFF 
+

@@ -17,3 +17,14 @@ findCID :: ChannelType -> (ChannelIdentifier, ChannelIdentifier)
 findCID Connection = (Dynamic, Dynamic)
 findCID ConnectionLess = (Dynamic, toChannelIdentifier 0x0002)
 findCID Signal = (toChannelIdentifier 0x0001, toChannelIdentifier 0x0001)
+
+-- | 
+toConfigurationResultCodeIdentifier :: Int -> ConfigurationResultCode 
+toConfigurationResultCodeIdentifier val 
+  | val == 0x0000 = L2CAP_CONF_RESULT_SUCCESS
+  | val == 0x0001 = L2CAP_CONF_RESULT_UNACCEPTABLE_PARAMETERS 
+  | val == 0x0002 = L2CAP_CONF_RESULT_REJECT 
+  | val == 0x0003 = L2CAP_CONF_RESULT_UNKNOWN_OPTIONS   
+  | val == 0x0004 = L2CAP_CONF_RESULT_PENDING          
+  | val == 0x0005 = L2CAP_CONF_RESULT_FLOW_SPEC_REJECTED 
+
