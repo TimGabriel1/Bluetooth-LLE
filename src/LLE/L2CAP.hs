@@ -18,7 +18,7 @@ findCID Connection = (Dynamic, Dynamic)
 findCID ConnectionLess = (Dynamic, toChannelIdentifier 0x0002)
 findCID Signal = (toChannelIdentifier 0x0001, toChannelIdentifier 0x0001)
 
--- | 
+-- | match result configuration codes
 toConfigurationResultCodeIdentifier :: Int -> ConfigurationResultCode 
 toConfigurationResultCodeIdentifier val 
   | val == 0x0000 = L2CAP_CONF_RESULT_SUCCESS
@@ -28,3 +28,10 @@ toConfigurationResultCodeIdentifier val
   | val == 0x0004 = L2CAP_CONF_RESULT_PENDING          
   | val == 0x0005 = L2CAP_CONF_RESULT_FLOW_SPEC_REJECTED 
 
+-- | offsets for Signalling
+toSignalOffsetIdentifier :: Int -> SignallingOffsets
+toSignalOffsetIdentifier val 
+  | val == 0 = L2CAP_SIGNALING_COMMAND_CODE_OFFSET 
+  | val == 1 = L2CAP_SIGNALING_COMMAND_SIGID_OFFSET 
+  | val == 2 = L2CAP_SIGNALING_COMMAND_LENGTH_OFFSET 
+  | val == 4 = L2CAP_SIGNALING_COMMAND_DATA_OFFSET 
