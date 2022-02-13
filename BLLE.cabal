@@ -29,11 +29,13 @@ library
       LLE.Advertising
       LLE.Data
       LLE.L2CAP
+      LLE.LinkLayer
       LLE.Utils
       Types.Advertising
       Types.Data
       Types.Event
       Types.L2CAP
+      Types.LinkLayer
       Types.Signal
   other-modules:
       Paths_BLLE
