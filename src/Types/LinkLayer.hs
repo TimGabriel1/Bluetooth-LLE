@@ -6,10 +6,10 @@ import Data.Int
 data State/* Connection state channel map
  * Must not be modified directly, use function ll_set_data_ch_map() instead */
 static struct {
-	uint64_t mask:40;
-	uint8_t used[LL_DATA_CH_NB];
-	uint8_t cnt;
-} data_ch_map;= LL_STATE_STANDBY
+	uint64_t mask:40 :: 
+	uint8_t used[LL_DATA_CH_NB] :: 
+	uint8_t cnt :: 
+} data_ch_map :: = LL_STATE_STANDBY
     | LL_STATE_ADVERTISING
     | LL_STATE_SCANNING
     | LL_STATE_INITIATING
@@ -72,17 +72,19 @@ data  ll_pdu_t
 
 -- brief Connection parameters structure 
 -- TODO helper macros to convert to and from us 
-typedef struct {
-	/** range: 7.5ms -> 4s, unit: 1.25ms */
-	uint16_t	conn_interval_min;
-	/** range: 7.5ms -> 4s, unit: 1.25ms */
-	uint16_t	conn_interval_max;
-	/** range : 0 -> 499, slave latency in number of connection events */
-	uint16_t	conn_latency;
-	/** range: 100ms -> 32s, unit: 10ms */
-	uint16_t	supervision_timeout;
-	/** range: 0ms -> 40s, unit: 0.625ms, min. length of connection events*/
-	uint16_t	minimum_ce_length;
-	/** range: 0ms -> 40s, unit: 0.625ms, max. length of connection events*/
-	uint16_t	maximum_ce_length;
-} ll_conn_params_t;
+data LL_CONN_PARAMS_T = LL_CONN_PARAMS_T
+    {
+	-- |range: 7.5ms -> 4s, unit: 1.25ms 
+	conn_interval_min :: Int16
+	-- |range: 7.5ms -> 4s, unit: 1.25ms 
+	, conn_interval_max :: Int16
+	-- |range : 0 -> 499, slave latency in number of connection events
+	, conn_latency :: Int16	
+	-- |range: 100ms -> 32s, unit: 10ms 
+	, supervision_timeout :: Int16
+	-- |range: 0ms -> 40s, unit: 0.625ms, min. length of connection events
+	, minimum_ce_length :: Int16
+	-- |range: 0ms -> 40s, unit: 0.625ms, max. length of connection events
+	, maximum_ce_length :: Int16
+} 
+
